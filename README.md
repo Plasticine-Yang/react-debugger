@@ -10,7 +10,11 @@
 npm i
 ```
 
-2. 构建 react 源码
+2. 修改 sourcemap 路径映射
+
+修改 `react/scripts/rollup/build.js` 中的 `getRollupOutputOptions` 函数，在返回的 `sourcemapPathTransform` 方法中配置映射路径
+
+3. 构建 react 源码
 
 ```shell
 cd react

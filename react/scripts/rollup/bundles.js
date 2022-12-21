@@ -90,6 +90,52 @@ const bundles = [
     externals: ['ReactNativeInternalFeatureFlags'],
   },
 
+  /******* React DOM *******/
+  {
+    bundleTypes: [
+      UMD_DEV,
+      UMD_PROD,
+      UMD_PROFILING,
+      NODE_DEV,
+      NODE_PROD,
+      NODE_PROFILING,
+      FB_WWW_DEV,
+      FB_WWW_PROD,
+      FB_WWW_PROFILING,
+    ],
+    moduleType: RENDERER,
+    entry: 'react-dom',
+    global: 'ReactDOM',
+    minifyWithProdErrorCodes: true,
+    wrapWithModuleBoundaries: true,
+    externals: ['react'],
+  },
+];
+
+const rawBundles = [
+  /******* Isomorphic *******/
+  {
+    bundleTypes: [
+      UMD_DEV,
+      UMD_PROD,
+      UMD_PROFILING,
+      NODE_DEV,
+      NODE_PROD,
+      FB_WWW_DEV,
+      FB_WWW_PROD,
+      FB_WWW_PROFILING,
+      RN_FB_DEV,
+      RN_FB_PROD,
+      RN_FB_PROFILING,
+    ],
+    moduleType: ISOMORPHIC,
+    entry: 'react',
+    global: 'React',
+    minifyWithProdErrorCodes: false,
+    wrapWithModuleBoundaries: true,
+    externals: ['ReactNativeInternalFeatureFlags'],
+  },
+
   /******* Isomorphic Shared Subset *******/
   {
     bundleTypes: [NODE_DEV, NODE_PROD],

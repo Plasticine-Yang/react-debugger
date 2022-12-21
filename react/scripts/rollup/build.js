@@ -183,6 +183,10 @@ function getRollupOutputOptions(
     interop: false,
     name: globalName,
     sourcemap: true,
+    // 添加 sourcemap 路径映射
+    sourcemapPathTransform(relativeSourcePath, sourcemapPath) {
+      return relativeSourcePath.replace('../../../../packages', '/home/plasticine/code/projects/react-debugger')
+    },
     esModule: false,
   };
 }
