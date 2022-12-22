@@ -19,7 +19,7 @@ npm i
 ```shell
 cd react
 yarn
-yarn build
+yarn build react react-dom
 ```
 
 > 执行 yarn 时出现 https 错误不影响 yarn build 的执行
