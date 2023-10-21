@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
-    "debug:18-2-0": "rimraf playground/18-2-0/node_modules && yarn --cwd playground/18-2-0 && yarn --cwd playground/18-2-0 run dev",
     "install:18-2-0": "yarn --cwd react-source-code/18-2-0",
-    "build:18-2-0": "yarn --cwd react-source-code/18-2-0 run build react/index,react-dom/index,jsx-runtime,jsx-dev-runtime,scheduler --type=NODE"
+    "build:18-2-0": "yarn --cwd react-source-code/18-2-0 run build react/index,react-dom/index,jsx-runtime,jsx-dev-runtime,scheduler --type=NODE",
+    "debug:18-2-0": "rimraf playground/18-2-0/node_modules && yarn --cwd playground/18-2-0 && yarn --cwd playground/18-2-0 run dev"
   },
   "dependencies": {
     "rimraf": "^5.0.5"
